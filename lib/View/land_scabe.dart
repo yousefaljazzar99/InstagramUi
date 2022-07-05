@@ -19,7 +19,9 @@ class CustomLandScape extends StatelessWidget {
                 children: const [
                   UserAccountsDrawerHeader(
                       currentAccountPicture: CircleAvatar(
-                        child: Text('o'),
+                        //  child: Text('o'),
+                        backgroundImage: NetworkImage(
+                            'https://scontent.fgza9-1.fna.fbcdn.net/v/t39.30808-1/287712463_3206591236274690_3147253001728781126_n.jpg?stp=dst-jpg_p160x160&_nc_cat=108&ccb=1-7&_nc_sid=7206a8&_nc_ohc=1p5_tXl3GVsAX9Ruv_Q&_nc_ht=scontent.fgza9-1.fna&oh=00_AT-4_oGSN4tBPBeMdf0JTY5zshctono78wWhaVJIo_D1aA&oe=62C1BC1D'),
                       ),
                       accountName: Text('Yousef Aljazzar'),
                       accountEmail: Text('Yousef.n.aljazzar@gmail.com')),
@@ -47,7 +49,7 @@ class CustomLandScape extends StatelessWidget {
           ),
           Container(
             padding: EdgeInsets.all(20),
-            width: MediaQuery.of(context).size.width * 0.5,
+            width: MediaQuery.of(context).size.width * 0.3,
             height: MediaQuery.of(context).size.height,
             child: SingleChildScrollView(
               child: Column(children: [

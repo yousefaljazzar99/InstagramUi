@@ -1,3 +1,7 @@
+import 'dart:math';
+
+import 'package:first/data/news_app/data/fake_news_responce.dart';
+import 'package:first/data/new_model.dart';
 import 'package:first/model/posts_Response.dart';
 
 List<Map<String, dynamic>> postsResponse = [
@@ -443,3 +447,8 @@ List<Map<String, dynamic>> postsResponse = [
 
 List<PostsResponse> posts =
     postsResponse.map((e) => PostsResponse.fromJson(e)).toList();
+
+List<Map<String, dynamic>> articles = newsReponse['articles'];
+List<NewsModel> news = articles.map((e) {
+  return NewsModel.fromJson(e);
+}).toList();
