@@ -2,7 +2,7 @@
 
 import 'dart:developer';
 
-import 'package:first/nav/screens/screen3..dart';
+import 'package:first/navigator/screens/screen3..dart';
 import 'package:flutter/material.dart';
 
 class screen1 extends StatelessWidget {
