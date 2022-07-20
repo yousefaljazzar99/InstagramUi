@@ -1,5 +1,5 @@
-import 'package:first/Widget/Post_widget.dart';
-import 'package:first/model/dummyData.dart';
+import 'package:first/instegram/Widget/Post_widget.dart';
+import 'package:first/instegram/model/dummyData.dart';
 import 'package:flutter/material.dart';
 
 class HomeSecreen extends StatelessWidget {

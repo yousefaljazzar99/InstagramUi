@@ -1,6 +1,7 @@
-import 'package:first/Widget/Post_widget.dart';
-import 'package:first/Widget/Story_Widget.dart';
-import 'package:first/model/dummyData.dart';
+import 'package:first/instegram/View/new_post.dart';
+import 'package:first/instegram/Widget/Post_widget.dart';
+import 'package:first/instegram/Widget/Story_Widget.dart';
+import 'package:first/instegram/model/dummyData.dart';
 import 'package:flutter/material.dart';
 
 import 'land_scabe.dart';
@@ -32,6 +33,17 @@ class instegramUi extends StatelessWidget {
   Widget build(BuildContext context) {
     Orientation orientation = MediaQuery.of(context).orientation;
     return Scaffold(
+      floatingActionButton: FloatingActionButton(
+        backgroundColor: Colors.red,
+        onPressed: () {
+          Navigator.push(
+            context,
+            MaterialPageRoute(builder: (context) => NewPost()),
+          );
+          // AppRouter.NavigateToWidget(NewPost());
+        },
+        child: Icon(Icons.add),
+      ),
       drawer: orientation == Orientation.landscape
           ? null
           : Drawer(
@@ -42,7 +54,7 @@ class instegramUi extends StatelessWidget {
                       currentAccountPicture: CircleAvatar(
                         //  child: Text('o'),
                         backgroundImage: NetworkImage(
-                            'https://scontent.fgza9-1.fna.fbcdn.net/v/t39.30808-1/287712463_3206591236274690_3147253001728781126_n.jpg?stp=dst-jpg_p160x160&_nc_cat=108&ccb=1-7&_nc_sid=7206a8&_nc_ohc=1p5_tXl3GVsAX9Ruv_Q&_nc_ht=scontent.fgza9-1.fna&oh=00_AT-4_oGSN4tBPBeMdf0JTY5zshctono78wWhaVJIo_D1aA&oe=62C1BC1D'),
+                            'https://images.unsplash.com/photo-1658242356534-9935f4e9aaed?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80'),
                       ),
                       accountName: Text('Yousef Aljazzar'),
                       accountEmail: Text('Yousef.n.aljazzar@gmail.com')),

@@ -1,15 +1,15 @@
 import 'dart:math';
 
-import 'package:first/data/news_app/data/fake_news_responce.dart';
-import 'package:first/data/new_model.dart';
-import 'package:first/model/posts_Response.dart';
+import 'package:first/instegram/model/posts_Response.dart';
+import 'package:first/news_app/data/fake_news_responce.dart';
+import 'package:first/news_app/data/new_model.dart';
 
 List<Map<String, dynamic>> postsResponse = [
   {
     'user': {
       'name': 'Yousef Aljazzar ',
       'image':
-          'https://scontent.fgza9-1.fna.fbcdn.net/v/t39.30808-1/287712463_3206591236274690_3147253001728781126_n.jpg?stp=dst-jpg_p160x160&_nc_cat=108&ccb=1-7&_nc_sid=7206a8&_nc_ohc=1p5_tXl3GVsAX9Ruv_Q&_nc_ht=scontent.fgza9-1.fna&oh=00_AT-4_oGSN4tBPBeMdf0JTY5zshctono78wWhaVJIo_D1aA&oe=62C1BC1D'
+          'https://images.unsplash.com/photo-1658242356534-9935f4e9aaed?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80'
     },
     'post': {
       'content':

@@ -1,7 +1,8 @@
-import 'package:first/data/new_model.dart';
-import 'package:first/data/news_app/view/screens/all_news_screen.dart';
-import 'package:first/data/news_app/view/screens/favourite_Screen.dart';
-import 'package:first/model/dummyData.dart';
+import 'package:first/instegram/model/dummyData.dart';
+import 'package:first/news_app/data/new_model.dart';
+import 'package:first/news_app/view/all_news_screen.dart';
+import 'package:first/news_app/view/contact.dart';
+import 'package:first/news_app/view/favourite_Screen.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
@@ -21,19 +22,22 @@ class _MainScreenState extends State<MainScreen> {
   Widget build(BuildContext context) {
     // TODO: implement build
     return DefaultTabController(
-      length: 2,
+      length: 3,
       child: Scaffold(
         appBar: AppBar(
           title: const Text(
             'App News',
           ),
           backgroundColor: Colors.red,
-          bottom: const TabBar(tabs: [
+          bottom: TabBar(tabs: [
             Tab(
               text: 'All',
             ),
             Tab(
               text: 'FAVOURITE',
+            ),
+            Tab(
+              text: 'Cnontact us',
             ),
           ]),
           centerTitle: true,
@@ -41,6 +45,7 @@ class _MainScreenState extends State<MainScreen> {
         body: TabBarView(children: [
           AllNewsScreen(likeNews),
           FavouriteScreen(likeNews),
+          ContactUs(),
         ]),
       ),
     );

@@ -1,5 +1,4 @@
-import 'package:first/model/post.dart';
-import 'package:first/model/user.dart';
+import 'package:first/instegram/model/user.dart';
 
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';

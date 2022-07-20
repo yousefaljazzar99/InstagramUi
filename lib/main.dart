@@ -1,12 +1,23 @@
-import 'package:first/View/Test.dart';
-import 'package:first/View/instegramUi.dart';
-import 'package:first/data/news_app/view/screens/all_news_screen.dart';
-import 'package:first/data/news_app/view/screens/main_screen.dart';
+import 'package:easy_localization/easy_localization.dart';
+import 'package:first/instegram/View/instegramUi.dart';
+import 'package:first/nav/screens/screen1.dart';
+import 'package:first/nav/screens/screen2.dart';
+import 'package:first/nav/screens/screen3..dart';
+import 'package:first/talha/talha.dart';
+import 'package:first/transUi.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-void main() {
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+
+  await EasyLocalization.ensureInitialized();
   runApp(
-    MyApp(),
+    EasyLocalization(
+        supportedLocales: [Locale('en'), Locale('ar')],
+        path: 'assets/langs', // <-- change the path of the translation files
+        fallbackLocale: Locale('en'),
+        child: MyApp()),
   );
 }
 
@@ -27,16 +38,30 @@ class MyAppState extends State<MyApp> {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      // theme: isDark ? ThemeData.dark() : ThemeData.light(),
-      home: MainScreen(),
+    return ScreenUtilInit(
+      designSize: const Size(360, 800),
+      minTextAdapt: true,
+      splitScreenMode: true,
+      builder: (context, child) {
+        return MaterialApp(
+          localizationsDelegates: context.localizationDelegates,
+          supportedLocales: context.supportedLocales,
+          locale: context.locale,
+          debugShowCheckedModeBanner: false,
+          home: instegramUi(),
+          // theme: isDark ? ThemeData.dark() : ThemeData.light(),
+          // routes: {
+          //   '/': (context) => screen1(),
+          //   '/screen2': (context) => screen2(),
+          //   '/screen3': (context) => screen3(),
+          // },
 
-      //ChangeColor(changeTheme, isDark),
+          //ChangeColor(changeTheme, isDark),
+        );
+      },
     );
   }
 }
-
 
 // class test extends StatelessWidget {
 //   @override

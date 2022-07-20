@@ -1,5 +1,6 @@
-import 'package:first/model/post.dart';
-import 'package:first/model/user.dart';
+import 'package:first/instegram/model/post.dart';
+import 'package:first/instegram/model/user.dart';
+
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
@@ -47,10 +48,15 @@ class Post_Widget extends StatelessWidget {
             Container(
               width: 400,
               height: 400,
-              child: Image.network(
-                post.image ?? '',
-                fit: BoxFit.fill,
-              ),
+              child: post.file == null
+                  ? Image.network(
+                      post.image ?? '',
+                      fit: BoxFit.fill,
+                    )
+                  : Image.file(
+                      post.file!,
+                      fit: BoxFit.fill,
+                    ),
             ),
             Container(
               padding: const EdgeInsets.only(
