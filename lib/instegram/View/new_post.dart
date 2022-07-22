@@ -112,8 +112,7 @@ class _NewPostState extends State<NewPost> {
                             },
                             textColor: Colors.red,
                           ),
-                          content:
-                              Text('You Have to Select image first'.tr())));
+                          content: Text('You Have to Select image first')));
 
                       // showDialog(
                       //     context: context,

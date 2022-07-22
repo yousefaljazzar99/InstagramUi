@@ -20,7 +20,7 @@ class TestUi extends StatelessWidget {
             Container(
               margin: EdgeInsets.symmetric(horizontal: 10.w, vertical: 10.h),
               width: double.infinity,
-              height: 500,
+              height: 550,
               child: ImageSlideshow(
                 initialPage: 0,
                 indicatorColor: Colors.blue,
